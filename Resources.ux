@@ -1,0 +1,5 @@
+<Panel ux:Class="Resources">
+   <Font File="Assets/fonts/Roboto-Black.ttf" ux:Global="RobotoBold" />
+   <Text ux:Class="Chapeau" />
+   <Text ux:Class="GrandTitre" />
+</Panel>

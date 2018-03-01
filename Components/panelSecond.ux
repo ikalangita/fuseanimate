@@ -1,0 +1,16 @@
+<!-- ........... Block type 2 .......... -->
+<Panel ux:Class="panelSecond" ux:Name="panelSecond" Margin="20,0,20,0" Height="400" >
+   <Rectangle ux:Name="rectangleRoundedCornerd" CornerRadius="8">
+      <DropShadow Distance="3" Spread="0.06" Color="#0003" Angle="90" />
+      <Panel Margin="20">
+         <GrandTitre Width="200" LineSpacing="-10" Alignment="CenterLeft" Color="#fff" TextWrapping="Wrap" Font="RobotoBold" FontSize="53" Value="{= toUpper('Parole du jour')}" />
+      </Panel>
+      <DockPanel Margin="20" >
+         <Chapeau ux:Name="textContent" Dock="Bottom" Color="#fff" TextWrapping="Wrap" Font="Medium" FontSize="15">Lorem ipsum dolor sit amet, consectetur adipiscing elit</Chapeau>
+      </DockPanel>
+      <ImageFill StretchMode="UniformToFill" File="../Assets/event2.jpg" />
+   </Rectangle>
+   <WhilePressed>
+        <Scale Factor="0.96" Duration="0.2"/>
+   </WhilePressed>
+</Panel>

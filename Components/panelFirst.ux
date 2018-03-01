@@ -1,0 +1,54 @@
+<!-- ........... Block type 1 .......... -->
+<Panel ux:Class="panelFirst" Margin="20" ux:Name="wrapper"  Clicked="{updateInputValue}">
+   <Circle Opacity="0" ux:Name="closeButton" Color="#fff5" Width="40" Height="40" Margin="20" Alignment="TopRight" >
+      <!--Text Value="x" Alignment="Center" FontSize="10" TextColor="#424242"/-->
+      <Clicked>
+         <DebugAction Message="Button was clicked" />
+         <Set makeFullWidth.Value="false" />
+      </Clicked>
+   </Circle>
+   <!-- The rounded border -->
+   <!--Grid ux:Name="Grille" Rows="1*,auto"-->
+   <StackPanel>
+      <Clicked>
+         <Set makeFullWidth.Value="true" />
+         <Set textContentWrapper.Padding="20"/>
+         <Set panelShadow.Color="#fff" />
+         <!--Scale Factor="0.96" Duration="0.5" Easing="CubicOut" /-->
+      </Clicked>
+      <Rectangle Height="350" ux:Name="rectangleRoundedCorner" CornerRadius="8" >
+         <DropShadow ux:Name="panelShadow" Distance="3" Spread="0.06" Color="#0003" Angle="90" />
+         <!-- The Content -->
+         <StackPanel ux:Name="titleWrapper" Margin="20" Alignment="Left">
+            <Chapeau Color="#fff" TextWrapping="Wrap" Font="Medium" FontSize="15" Value="Lorem ipsum dolor sit amet" />
+            <GrandTitre Width="200" Margin="0,10,0,0" Color="#fff" TextWrapping="Wrap" Font="Medium" FontSize="35" Value="The art of impossible" />
+         </StackPanel>
+         <!--DockPanel Margin="20" >
+            <Chapeau Dock="Bottom" Color="#fff" TextWrapping="Wrap" Font="Medium" FontSize="15" Value="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
+         </DockPanel-->
+         <ImageFill StretchMode="UniformToFill" File="../Assets/event4.jpg" />
+      </Rectangle>
+      <Panel ux:Name="textContentWrapper" Height="0" Opacity="0">
+         <Text ux:Name="textContent" Opacity="0" LineSpacing="5" FontSize="13" TextWrapping="Wrap" Value="{textContent}" />
+      </Panel>
+   </StackPanel>
+   <!--/Grid-->
+
+   <!-- Events Listener
+   <WhileTrue ux:Name="makeFullWidth">
+      <Change panelShadow.Color="#fff" />
+      <Change wrapper.Margin="0" Duration="0.5" Easing="QuinticIn"/>
+      <Change rectangleRoundedCorner.CornerRadius="0" Delay="0.5" Duration="0.2" />
+      <Change rectangleRoundedCorner.Height="450" Delay="0.5" Duration="0.8" Easing="QuinticOut"/>
+      <Change textContentWrapper.Background="#fff" />
+      <Change textContentWrapper.Opacity="1" Duration="0.5" DurationBack="0.4"/>
+      <Change textContentWrapper.Height="400" Delay="0.5" Duration="0.5" DurationBack="0.8"/>
+      <Change textContent.Opacity="1" Delay="0.8" Duration="0.5" />
+      <Change closeButton.Opacity="1" Duration="0.5" />
+   </WhileTrue -->
+
+   <ux:Include File="animation.ux" />
+   <!--WhilePressed>
+        <Scale Factor="0.96" Duration="0.2"/>
+   </WhilePressed-->
+</Panel>

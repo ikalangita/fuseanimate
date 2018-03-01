@@ -1,0 +1,24 @@
+<App>
+   <JavaScript>
+   var Observable = require("FuseJS/Observable");
+   var textContent = Observable("");
+   //var env = require('FuseJS/Environment');
+
+   function updateInputValue(){
+      // TODO recupérer le contenu depuis l'API
+      textContent.value = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat quam ac neque ultrices, id pretium purus convallis. Maecenas ac condimentum ante. Nam quis est tempus metus commodo tincidunt ac vitae lorem. Integer efficitur diam eget vestibulum sagittis. Phasellus sodales tellus in elit aliquam consequat sit amet a augue. Duis cursus imperdiet ante sit amet porttitor. Sed ac iaculis lacus. Duis ut pulvinar leo, id sagittis eros.";
+   }
+   module.exports = {
+      updateInputValue : updateInputValue,
+      textContent : textContent,
+   }
+   </JavaScript>
+   <iOS.StatusBarConfig Style="Light" />
+   <ScrollView Background="#eee" >
+      <StackPanel ux:Name="parentPanel" ItemSpacing="1" >
+         <panelFirst />
+         <panelSecond />
+         <MyChart />
+      </StackPanel>
+   </ScrollView>
+</App>

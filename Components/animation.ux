@@ -1,0 +1,12 @@
+   <!-- Events Listener -->
+   <WhileTrue ux:Name="makeFullWidth">
+      <Change panelShadow.Color="#fff" />
+      <Change wrapper.Margin="0" Duration="0.5" Easing="QuadraticInOut"/>
+      <Change rectangleRoundedCorner.CornerRadius="0" Delay="0.3" Easing="QuadraticInOut"/>
+      <Change rectangleRoundedCorner.Height="450" Delay="0.5" Duration="0.5" Easing="QuadraticInOut"/>
+      <Change textContentWrapper.Background="#fff" Easing="QuadraticInOut"/>
+      <Change textContentWrapper.Opacity="1" Duration="0.5" Easing="QuadraticInOut"/>
+      <Change textContentWrapper.Height="400" Delay="0.8"  Easing="QuadraticInOut"/>
+      <Change textContent.Opacity="1" Delay="0.5" Duration="0.8" Easing="QuadraticInOut"/>
+      <Change closeButton.Opacity="1" Duration="0.5"  Easing="QuadraticInOut"/>
+   </WhileTrue>
